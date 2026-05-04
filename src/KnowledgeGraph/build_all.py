@@ -22,7 +22,7 @@ def init_excel():
 
 init_excel()
 
-raw_text = get_extracted_document(start_pos= 1, length= 100)
+raw_text = get_extracted_document(start_pos= 1, length= 100) # 这两个参数能让代码一次只处理部分数据，避免因为中间失败导致前面跑的全白费，不仅费时间还费钱
 build_graphrag(raw_text,'add')
 transform_properties_to_nodes()
 deduplication()
