@@ -52,4 +52,4 @@ def plot_affinity_heatmap(affinity_matrix_path, title="亲缘强度热度图"):
     plt.show()
     # 打印出图片
 
-plot_affinity_heatmap("affinity_matrix_lora.json")
+plot_affinity_heatmap("affinity_matrix.json")

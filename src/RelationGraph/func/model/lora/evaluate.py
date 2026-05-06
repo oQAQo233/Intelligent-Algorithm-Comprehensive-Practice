@@ -19,7 +19,7 @@ class TextDataset(Dataset): # 用于 DataLoader 批处理
         return self.texts[idx]
 
 
-def lora_predict_and_evaluate(model_path, base_model_name, num_labels,
+def lora_evaluate(model_path, base_model_name, num_labels,
                                 dataset_path, top_k_list=None):
 
     # Step 1： 设备配置和加载分词器&模型
@@ -75,7 +75,7 @@ def lora_predict_and_evaluate(model_path, base_model_name, num_labels,
 
     proba = np.vstack(all_probs)
 
-    # Step 5：计算评估值并返回
+    # Step 5：计算评估值
     pred = np.argmax(proba, axis=1)
     acc = accuracy_score(y_test, pred)
     f1 = f1_score(y_test, pred, average="macro")
@@ -85,6 +85,4 @@ def lora_predict_and_evaluate(model_path, base_model_name, num_labels,
         topk = top_k_accuracy(proba, y_test, top_k_list)
         for k, v in topk.items():
             print(f"Top-{k} Accuracy: {v:.4f}")
-        return proba, topk
 
-    return proba
