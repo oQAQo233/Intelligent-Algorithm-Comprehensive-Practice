@@ -758,11 +758,11 @@ class Matcher:
             self.scores.append(self.cal_score_simple(self.jt2num[i[0]]))
             print(i, datetime.datetime.now().strftime(" %Y-%m-%d %H:%M:%S"))
         self.scores.sort(key=lambda x: x[1], reverse=True)
-        fp_save = FileProcessor("")
-        for i in range(3):
-            fp_save.file_path = f"D://JetBrains/PycharmProjects/Intelligent-Algorithm-Comprehensive-Practice/{self.resume_info["name"]}_{i+1}.json"
-            fp_save.write(self.scores[i])
-        print("文件已保存")
+        # fp_save = FileProcessor("")
+        # for i in range(3):
+        #     fp_save.file_path = f"D://JetBrains/PycharmProjects/Intelligent-Algorithm-Comprehensive-Practice/{self.resume_info["name"]}_{i+1}.json"
+        #     fp_save.write(self.scores[i])
+        # print("文件已保存")
         return self.scores
 
 

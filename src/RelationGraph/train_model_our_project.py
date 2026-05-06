@@ -14,7 +14,7 @@ save_data(df, use_augmentation = False)
 
 
 # Step 2：训练模型
-train_and_evaluate_lora()
+# train_and_evaluate_lora()
 
 # Step 3：评价模型
 lora_evaluate(

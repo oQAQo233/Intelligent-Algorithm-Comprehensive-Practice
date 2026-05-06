@@ -81,5 +81,5 @@ def print_top_affinity_pairs(affinity_matrix_path, top_k = 10):
         name_j = class_names[j]
         print(f"{rank:2d}. {name_i}  <-->  {name_j}  亲缘强度: {val:.4f}")
 
-plot_affinity_heatmap("affinity_matrix_lora.json")
-print_top_affinity_pairs("affinity_matrix_lora.json", 10)
+plot_affinity_heatmap("affinity_matrix.json")
+print_top_affinity_pairs("affinity_matrix.json", 10)
