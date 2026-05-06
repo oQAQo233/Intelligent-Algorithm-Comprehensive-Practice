@@ -3,7 +3,7 @@ import json
 
 import datetime
 
-from src.RelationGraph.func.use.use_lora_model import predict_probabilities
+from src.RelationGraph.func.model.lora.use import predict_probabilities
 from src.processor.utils.FileProcessor import FileProcessor
 from src.processor.utils.LLMInvoker import LLMInvoker
 
